@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hoops Cash — Hooporia Institute Inc.</title>
+<meta name="description" content="Hoops Cash is a project operated by Hooporia Institute Inc., a nonprofit organization advancing youth basketball transparency and development through sponsorship support." />
+<meta name="theme-color" content="#0e1116" />
+
+<style>
+:root{
+--bg:#0e1116;--card:#161c26;--line:#232e3f;--text:#ecf1f8;--muted:#a7b1c2;
+--acc1:#2dd4bf;--acc2:#60a5fa;--ctaTxt:#06221f;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
+color:var(--text);
+background:linear-gradient(180deg,#0b0f14 0%,#0e1116 100%);
+}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* HEADER */
+header{
+position:sticky;top:0;z-index:10;
+backdrop-filter:saturate(140%) blur(6px);
+background:rgba(10,14,20,.55);
+border-bottom:1px solid var(--line);
+}
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:14px 0;
+gap:12px;
+}
+.brand{display:flex;gap:10px;align-items:center}
+.logo{height:42px;width:auto;border-radius:6px}
+@media(max-width:600px){.logo{height:34px}}
+.title{font-weight:800;letter-spacing:.2px}
+.badge{font-size:12px;color:var(--muted)}
+
+/* LANG TOGGLE */
+.lang-toggle{display:flex;gap:8px;margin-left:auto}
+.lang-toggle button{
+border:1px solid #2a3b55;
+background:#0d1320;
+color:#cfe2ff;
+border-radius:20px;
+padding:6px 10px;
+cursor:pointer;
+font-size:12px;
+}
+.lang-toggle button.active{
+background:linear-gradient(90deg,var(--acc1),var(--acc2));
+color:var(--ctaTxt);
+border:none;
+font-weight:800;
+}
+[data-lang="en"] .lang-es{display:none}
+[data-lang="es"] .lang-en{display:none}
+
+/* HERO + CONTENT */
+.hero{padding:64px 0 36px}
+.h-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+@media(max-width:900px){.h-grid{grid-template-columns:1fr}}
+.h-lead h1{
+margin:0 0 10px 0;
+font-size:clamp(28px,4.6vw,44px);
+line-height:1.05;
+}
+.h-lead p{color:var(--muted);font-size:clamp(16px,2.8vw,18px)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.cta{
+display:inline-block;
+padding:14px 18px;
+border-radius:12px;
+font-weight:900;
+background:linear-gradient(90deg,var(--acc1),var(--acc2));
+color:var(--ctaTxt);
+border:none;
+box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+.meta{margin-top:14px;font-size:12px;color:var(--muted)}
+
+/* CARD MOCKUP */
+.mock{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:14px;
+padding:16px;
+min-height:240px;
+box-shadow:0 12px 32px rgba(0,0,0,.35);
+}
+.bars{height:160px;display:flex;gap:10px;align-items:flex-end}
+.bars div{flex:1;border-radius:8px 8px 0 0;background:linear-gradient(180deg,#1b2a3f,#0f1724)}
+.bars div:nth-child(1){height:50%}
+.bars div:nth-child(2){height:80%;background:linear-gradient(180deg,#0f3b3b,#0a1822)}
+.bars div:nth-child(3){height:40%}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.kpi{
+background:#0f1622;
+border:1px solid #1f2d42;
+padding:10px;
+border-radius:10px;
+text-align:center;
+}
+.kpi b{display:block;font-size:18px}
+
+/* CARDS */
+section{padding:30px 0}
+.grid3{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.grid3{grid-template-columns:1fr}}
+.card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:14px;
+padding:16px;
+box-shadow:0 10px 26px rgba(0,0,0,.28);
+}
+h2{margin:0 0 12px 0;font-size:22px}
+h3{margin:0 0 6px 0;font-size:16px}
+p{margin:0;color:var(--muted);line-height:1.5}
+
+/* FOOTER */
+footer{
+border-top:1px solid var(--line);
+color:var(--muted);
+font-size:13px;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+footer a{color:#9fc1ff;text-decoration:underline}
+</style>
+</head>
+
+<body>
+<header>
+<div class="wrap nav">
+<div class="brand">
+<img src="/images/hooporia-logo.png" alt="Hooporia Institute Inc. Logo" class="logo" />
+<div>
+<div class="title">Hoops Cash</div>
+<div class="badge">
+<span class="lang-en">by Hooporia Institute Inc.</span>
+<span class="lang-es">por Hooporia Institute Inc.</span>
+</div>
+</div>
+</div>
+<div class="lang-toggle" role="group" aria-label="Language">
+<button id="btn-en" class="active" aria-pressed="true">EN</button>
+<button id="btn-es" aria-pressed="false">ES-PR</button>
+</div>
+</div>
+</header>
+
+<main class="wrap">
+<section class="hero">
+<div class="h-grid">
+<div class="h-lead">
+<h1>
+<span class="lang-en">Powering youth basketball through sponsorship.</span>
+<span class="lang-es">Impulsando el baloncesto juvenil a través del auspicio.</span>
+</h1>
+<p>
+<span class="lang-en">
+Hoops Cash connects businesses and brands with youth basketball programs,
+helping fund access to Hoops Money and front-office tools across Puerto Rico and beyond.
+</span>
+<span class="lang-es">
+Hoops Cash conecta empresas y marcas con programas de baloncesto juvenil,
+ayudando a financiar acceso a Hoops Money y herramientas administrativas en Puerto Rico y más allá.
+</span>
+</p>
+<div class="cta-row">
+<a class="cta" href="mailto:FiatPalante@gmail.com?subject=Hoops%20Cash%20Sponsorship">
+<span class="lang-en">Talk to Us About Sponsorship</span>
+<span class="lang-es">Conversa con Nosotros sobre Auspicio</span>
+</a>
+</div>
+<div class="meta">
+<span class="lang-en">
+Marketing partnerships • Community impact • Support seats for leagues & programs
+</span>
+<span class="lang-es">
+Alianzas de mercadeo • Impacto comunitario • Apoya asientos para ligas y programas
+</span>
+</div>
+</div>
+
+<div class="mock" aria-label="Preview card">
+<div class="bars"><div></div><div></div><div></div></div>
+<div class="kpis">
+<div class="kpi">
+<span class="lang-en">Programs Supported</span>
+<span class="lang-es">Programas Apoyados</span>
+<b>15+</b>
+</div>
+<div class="kpi">
+<span class="lang-en">Youth Reached</span>
+<span class="lang-es">Jóvenes Impactados</span>
+<b>1,500+</b>
+</div>
+<div class="kpi">
+<span class="lang-en">Seasons Funded</span>
+<span class="lang-es">Temporadas Apoyadas</span>
+<b>Multiple</b>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="learn-more">
+<div class="grid3">
+<div class="card">
+<h3>
+<span class="lang-en">Sponsor with Purpose</span>
+<span class="lang-es">Auspicia con Propósito</span>
+</h3>
+<p>
+<span class="lang-en">
+Your support helps programs organize finances, plan seasons, and tell a clearer story to parents and partners.
+</span>
+<span class="lang-es">
+Tu apoyo ayuda a los programas a organizar sus finanzas, planificar temporadas y contar mejor su historia a padres y aliados.
+</span>
+</p>
+</div>
+
+<div class="card">
+<h3>
+<span class="lang-en">Brand Visibility</span>
+<span class="lang-es">Visibilidad de Marca</span>
+</h3>
+<p>
+<span class="lang-en">
+Sponsors can be recognized on reports, materials, and Hoops Money touchpoints — always community-first.
+</span>
+<span class="lang-es">
+Los auspiciadores pueden ser reconocidos en informes, materiales y puntos de contacto de Hoops Money — siempre con enfoque comunitario.
+</span>
+</p>
+</div>
+
+<div class="card">
+<h3>
+<span class="lang-en">Flexible Support</span>
+<span class="lang-es">Apoyo Flexible</span>
+</h3>
+<p>
+<span class="lang-en">
+Cash, equipment, uniforms, travel, or services — we work with you to match real needs in real programs.
+</span>
+<span class="lang-es">
+Efectivo, equipo, uniformes, viajes o servicios — trabajamos contigo para atender necesidades reales en programas reales.
+</span>
+</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="grid3">
+<div class="card">
+<h2>
+<span class="lang-en">How Hoops Cash Works</span>
+<span class="lang-es">Cómo Funciona Hoops Cash</span>
+</h2>
+<p>
+<span class="lang-en">
+We structure sponsorships as marketing partnerships and route support into seats and tools that leagues and teams can use immediately.
+</span>
+<span class="lang-es">
+Estructuramos el auspicio como alianzas de mercadeo y canalizamos tu apoyo a asientos y herramientas que ligas y equipos pueden usar de inmediato.
+</span>
+</p>
+</div>
+
+<div class="card">
+<h2>
+<span class="lang-en">Community First</span>
+<span class="lang-es">Comunidad Primero</span>
+</h2>
+<p>
+<span class="lang-en">
+We prioritize community, nonprofit, and volunteer-led programs — especially those serving high-need youth.
+</span>
+<span class="lang-es">
+Priorizamos programas comunitarios, sin fines de lucro y dirigidos por voluntarios — especialmente los que sirven a jóvenes de alto riesgo.
+</span>
+</p>
+</div>
+
+<div class="card">
+<h2>Hooporia Institute Inc.</h2>
+<p>
+<span class="lang-en">
+A nonprofit organization building simple, resilient tools and partnerships for youth basketball in Puerto Rico and beyond.
+</span>
+<span class="lang-es">
+Una organización sin fines de lucro que construye herramientas y alianzas simples y resilientes para el baloncesto juvenil en Puerto Rico y más allá.
+</span>
+</p>
+</div>
+</div>
+</section>
+
+<section class="center" style="text-align:center;">
+<a class="cta" href="mailto:FiatPalante@gmail.com?subject=Hoops%20Cash%20Sponsorship">
+<span class="lang-en">Start a Sponsorship Conversation</span>
+<span class="lang-es">Comienza una Conversación de Auspicio</span>
+</a>
+<div class="meta" style="margin-top:10px">
+<span class="lang-en">Media, partnerships, or custom support?</span>
+<span class="lang-es">¿Medios, alianzas o apoyo a la medida?</span>
+<a href="mailto:FiatPalante@gmail.com">FiatPalante@gmail.com</a>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+© <script>document.write(new Date().getFullYear());</script> Hooporia Institute Inc. — All Rights Reserved.<br>
+EIN: 66-1104700 • UEI: T411JSGE5L65<br>
+Hoops Cash is a project operated by Hooporia Institute Inc., a nonprofit organization dedicated to advancing youth basketball transparency and development.<br>
+<a href="/privacy.html">Privacy Policy</a> •
+<a href="/terms.html">Terms of Use</a> •
+<a href="/sponsorship-terms.html">Sponsorship Terms</a> •
+<a href="mailto:FiatPalante@gmail.com">Contact Us</a>
+</footer>
+
+<script>
+(function(){
+const key='lang_index';
+const root=document.documentElement;
+const btnEn=document.getElementById('btn-en');
+const btnEs=document.getElementById('btn-es');
+
+function setLang(lang){
+root.setAttribute('data-lang',lang);
+btnEn.classList.toggle('active', lang==='en');
+btnEs.classList.toggle('active', lang==='es');
+btnEn.setAttribute('aria-pressed', lang==='en');
+btnEs.setAttribute('aria-pressed', lang==='es');
+try{localStorage.setItem(key,lang);}catch(_){}
+}
+
+const saved=(()=>{
+try{return localStorage.getItem(key)}catch(_){return null}
+})();
+
+setLang(saved==='es'?'es':'en');
+
+btnEn.addEventListener('click',()=>setLang('en'));
+btnEs.addEventListener('click',()=>setLang('es'));
+})();
+</script>
+</body>
+</html>
