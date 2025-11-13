@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About — Hoops Money</title>
+<meta name="description" content="Learn about Hoops Money, a youth basketball cash flow system created by Hooporia Institute Inc.">
+<meta name="theme-color" content="#0e1116" />
+<style>
+:root{
+--bg:#0e1116; --card:#151a22; --line:#1f2733; --text:#e8edf4; --muted:#a7b1c2;
+--accent:#2dd4bf; --accent2:#60a5fa;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
+color:var(--text);
+background:linear-gradient(180deg,#0b0f14,#0e1116);
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+}
+a{color:#9fc1ff;text-decoration:underline}
+.wrap{
+max-width:1100px;
+margin:0 auto;
+padding:20px;
+}
+header{
+padding:16px 0 8px 0;
+border-bottom:1px solid var(--line);
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:12px;
+flex-wrap:wrap;
+}
+.logo-row{
+display:flex;
+align-items:center;
+gap:10px;
+}
+.logo-row img{
+height:40px;
+width:auto;
+border-radius:6px;
+}
+.logo-text{
+font-weight:800;
+letter-spacing:.2px;
+}
+.logo-sub{
+font-size:12px;
+color:var(--muted);
+}
+
+/* Language toggle */
+.lang-toggle{
+display:inline-flex;
+border-radius:999px;
+border:1px solid var(--line);
+overflow:hidden;
+margin-top:4px;
+}
+.lang-toggle button{
+background:transparent;
+border:none;
+padding:6px 12px;
+font-size:12px;
+color:var(--muted);
+cursor:pointer;
+}
+.lang-toggle button.active{
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+color:#041214;
+font-weight:700;
+}
+
+h1{
+margin:18px 0 10px 0;
+font-size:26px;
+}
+h2{
+margin:20px 0 8px 0;
+font-size:18px;
+}
+p{
+margin:0 0 10px 0;
+color:var(--muted);
+line-height:1.6;
+}
+ul{
+margin:0 0 12px 18px;
+padding:0;
+color:var(--muted);
+}
+li{margin:4px 0}
+.card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:12px;
+padding:18px 18px 12px 18px;
+margin-top:18px;
+}
+
+.footer{
+border-top:1px solid #243047;
+color:#a7b1c2;
+font-size:13px;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+.footer a{
+color:#9fc1ff;
+text-decoration:underline;
+}
+
+/* Language visibility */
+[data-page-lang="en"] .es-block{display:none}
+[data-page-lang="es"] .en-block{display:none}
+</style>
+</head>
+<body data-page-lang="en">
+<main class="wrap">
+<header>
+<div class="logo-row">
+<a href="/index.html" style="display:flex; gap:10px; align-items:center; text-decoration:none; color:inherit;">
+<img src="/images/hooporia-logo.png" alt="Hooporia Institute Inc. Logo" class="logo" />
+<div>
+<div class="logo-text">Hoops Money</div>
+<div class="logo-sub">Operated by Hooporia Institute Inc.</div>
+</div>
+</a>
+</div>
+
+<div class="lang-toggle" aria-label="Language toggle">
+<button type="button" id="btn-en" class="active">EN</button>
+<button type="button" id="btn-es">ES (PR)</button>
+</div>
+</header>
+
+<!-- ENGLISH ABOUT -->
+<section id="about-en" class="card en-block">
+<h1>About Hoops Money</h1>
+
+<h2>What is Hoops Money?</h2>
+<p>
+Hoops Money is a simple, bilingual cash flow system built for youth basketball programs, leagues, and teams.
+It gives organizers a clear, private way to track how money enters and leaves the program — without getting
+lost in spreadsheets or notebooks.
+</p>
+
+<h2>Why we created it</h2>
+<p>
+Many programs run on passion, volunteers, and trust — but little financial clarity.
+Hoops Money was created so directors, coaches, and coordinators can quickly see
+registrations, dues, sponsorships, tournaments, travel, and expenses in one secure place.
+</p>
+
+<h2>How programs use Hoops Money</h2>
+<ul>
+<li>Track income and expenses per team, league, division, or program.</li>
+<li>Run quick summaries to share with parents, boards, and community partners.</li>
+<li>Export CSV files when you need more detailed accounting or reporting.</li>
+<li>Keep information private and scoped to each program via secure PIN access.</li>
+</ul>
+
+<h2>Who we serve</h2>
+<p>Hoops Money is designed for:</p>
+<ul>
+<li>Youth leagues and tournaments.</li>
+<li>Independent travel and club teams.</li>
+<li>Nonprofits, clubs, and community programs.</li>
+<li>Administrators managing multiple divisions or age groups.</li>
+</ul>
+
+<h2>Hooporia Institute Inc.</h2>
+<p>
+Hoops Money is a project of <b>Hooporia Institute Inc.</b>, a nonprofit organization focused on the
+development of youth basketball, community impact, and program transparency across Puerto Rico and beyond.
+Our guiding phrase is <i>Fiat Pa’lante</i> — “Let there be progress.”
+</p>
+
+<h2>Contact</h2>
+<p>
+Have questions about bringing Hoops Money to your program?
+You can reach us at <a href="mailto:FiatPalante@gmail.com">FiatPalante@gmail.com</a>.
+</p>
+</section>
+
+<!-- SPANISH ABOUT -->
+<section id="about-es" class="card es-block" style="display:none">
+<h1>Sobre Hoops Money</h1>
+
+<h2>¿Qué es Hoops Money?</h2>
+<p>
+Hoops Money es un sistema simple y bilingüe de flujo de efectivo para programas, ligas y equipos
+de baloncesto juvenil. Ofrece una forma clara y privada de ver cómo entra y sale el dinero del
+programa, sin perderse en libretas ni hojas de cálculo.
+</p>
+
+<h2>Por qué lo creamos</h2>
+<p>
+Muchos programas funcionan con pasión, voluntarios y confianza, pero con poca claridad financiera.
+Hoops Money se creó para que directores, coaches y coordinadores puedan ver rápidamente
+matrículas, cuotas, auspicios, torneos, viajes y gastos en un solo lugar seguro.
+</p>
+
+<h2>Cómo usan Hoops Money los programas</h2>
+<ul>
+<li>Registrar ingresos y gastos por equipo, liga, división o programa.</li>
+<li>Generar resúmenes rápidos para compartir con padres, juntas y aliados comunitarios.</li>
+<li>Exportar archivos CSV cuando se necesitan informes o contabilidad más detallada.</li>
+<li>Mantener la información privada y limitada a cada programa mediante acceso con PIN seguro.</li>
+</ul>
+
+<h2>A quién servimos</h2>
+<p>Hoops Money está diseñado para:</p>
+<ul>
+<li>Ligas y torneos juveniles.</li>
+<li>Equipos de club y viajes.</li>
+<li>Organizaciones sin fines de lucro, clubes y programas comunitarios.</li>
+<li>Administradores que manejan múltiples divisiones o categorías.</li>
+</ul>
+
+<h2>Hooporia Institute Inc.</h2>
+<p>
+Hoops Money es un proyecto de <b>Hooporia Institute Inc.</b>, una organización sin fines de lucro
+enfocada en el desarrollo del baloncesto juvenil, el impacto comunitario y la transparencia
+de los programas en Puerto Rico y más allá. Nuestro lema es <i>Fiat Pa’lante</i> — “Que haya progreso”.
+</p>
+
+<h2>Contacto</h2>
+<p>
+¿Desea llevar Hoops Money a su programa?
+Puede escribirnos a <a href="mailto:FiatPalante@gmail.com">FiatPalante@gmail.com</a>.
+</p>
+</section>
+</main>
+
+<footer class="footer">
+© <script>document.write(new Date().getFullYear());</script> Hooporia Institute Inc. — All Rights Reserved.<br>
+EIN: 66-1104700 • UEI: T411JSGE5L65<br>
+Hoops Money is a project operated by Hooporia Institute Inc., a nonprofit organization dedicated to advancing youth basketball transparency and development.<br>
+<a href="/privacy.html">Privacy Policy</a> •
+<a href="/terms.html">Terms of Use</a> •
+<a href="mailto:FiatPalante@gmail.com">Contact Us</a>
+</footer>
+
+<script>
+(function(){
+const btnEn = document.getElementById('btn-en');
+const btnEs = document.getElementById('btn-es');
+const root = document.body;
+
+function showEn(){
+root.setAttribute('data-page-lang','en');
+document.getElementById('about-en').style.display = 'block';
+document.getElementById('about-es').style.display = 'none';
+btnEn.classList.add('active');
+btnEs.classList.remove('active');
+}
+function showEs(){
+root.setAttribute('data-page-lang','es');
+document.getElementById('about-en').style.display = 'none';
+document.getElementById('about-es').style.display = 'block';
+btnEn.classList.remove('active');
+btnEs.classList.add('active');
+}
+
+btnEn.addEventListener('click', showEn);
+btnEs.addEventListener('click', showEs);
+showEn();
+})();
+</script>
+</body>
+</html>
