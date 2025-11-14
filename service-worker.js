@@ -1,7 +1,10 @@
-self.addEventListener("install", () => {
-self.skipWaiting();
+<script>
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', function () {
+navigator.serviceWorker.register('/service-worker.js')
+.catch(function (err) {
+console.log('SW registration failed', err);
 });
-
-self.addEventListener("fetch", (event) => {
-event.respondWith(fetch(event.request));
 });
+}
+</script>
