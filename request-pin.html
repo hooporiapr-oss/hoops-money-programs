@@ -16,12 +16,12 @@
 body{
 margin:0;
 font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
-color:var(--text);
-background:linear-gradient(180deg,#0b0f14,#0e1116);
+color:#0e1116;
+background:#ffffff; /* ✅ White page background */
 -webkit-font-smoothing:antialiased;
 -moz-osx-font-smoothing:grayscale;
 }
-a{color:#9fc1ff;text-decoration:underline}
+a{color:#2563eb;text-decoration:underline}
 
 .wrap{
 max-width:1100px;
@@ -35,8 +35,9 @@ position:sticky;
 top:0;
 z-index:10;
 backdrop-filter:saturate(140%) blur(6px);
-background:rgba(10,14,20,.55);
+background:rgba(10,14,20,.85);
 border-bottom:1px solid var(--line);
+color:var(--text);
 }
 .nav{
 display:flex;
@@ -101,10 +102,11 @@ padding-top:28px;
 h1.hero-title{
 margin:0 0 10px 0;
 font-size:clamp(26px,4vw,32px);
+color:#111827;
 }
 p.hero-text{
 margin:0 0 18px 0;
-color:var(--muted);
+color:#4b5563;
 max-width:720px;
 }
 
@@ -112,32 +114,19 @@ max-width:720px;
 display:inline-block;
 padding:4px 10px;
 border-radius:999px;
-border:1px solid #2a3b55;
-background:#0b1320;
-color:#cfe2ff;
+border:1px solid #d1d5db;
+background:#f9fafb;
+color:#374151;
 font-size:12px;
 margin-bottom:8px;
 }
 .meta-line{
 font-size:13px;
-color:var(--muted);
+color:#6b7280;
 margin-bottom:14px;
 }
 
-/* CARD AROUND FORM */
-.form-shell{
-max-width:780px;
-margin:0 auto 40px;
-}
-.card{
-background:var(--card);
-border:1px solid var(--line);
-border-radius:14px;
-padding:18px;
-box-shadow:0 10px 26px rgba(0,0,0,.28);
-}
-
-/* Make iframe feel contained instead of giant white strip */
+/* FORM AREA */
 .form-frame{
 width:100%;
 min-height:800px;
@@ -154,6 +143,7 @@ font-size:13px;
 text-align:center;
 padding:20px;
 margin-top:10px;
+background:#0b0f14;
 }
 footer a{
 color:#9fc1ff;
@@ -201,14 +191,27 @@ Una vez aprobado, recibirá un correo electrónico con su PIN e instrucciones pa
 </p>
 </section>
 
-<!-- 🔹 COGNITO EMBED -->
+<section style="margin-top:18px; margin-bottom:40px;">
+<div class="pill">
+<span class="lang-en">For Coaches, Program Directors & League Admins</span>
+<span class="lang-es">Para Coaches, Directores de Programa y Administradores de Liga</span>
+</div>
+<p class="meta-line">
+<span class="lang-en">
+Typical fields: Program Name, Location, Your Name, Email, Role, Number of Teams, and Notes.
+</span>
+<span class="lang-es">
+Campos típicos: Nombre del Programa, Localidad, Su Nombre, Correo Electrónico, Rol, Número de Equipos y Notas.
+</span>
+</p>
+
+<!-- ✅ COGNITO EMBED -->
 <iframe
 src="https://www.cognitoforms.com/f/QosmDJVpBEWmQC5YVjkReA/6"
 allow="payment"
 class="form-frame"
 ></iframe>
 <script src="https://www.cognitoforms.com/f/iframe.js"></script>
-</div>
 </section>
 </div>
 </main>
