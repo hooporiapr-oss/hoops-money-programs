@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Request Access PIN — Cash Flow Hoops</title>
+<meta name="description" content="Request a secure program PIN to access Cash Flow Hoops for your youth basketball team or league.">
+<meta name="theme-color" content="#0e1116" />
+
+<style>
+:root{
+--bg:#0e1116; --card:#161c26; --line:#232e3f; --text:#ecf1f8; --muted:#a7b1c2;
+--acc1:#2dd4bf; --acc2:#60a5fa; --ctaTxt:#06221f;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
+color:var(--text);
+background:linear-gradient(180deg,#0b0f14 0%,#0e1116 100%);
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+}
+a{color:#9fc1ff;text-decoration:underline}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+
+/* HEADER */
+header{
+position:sticky;
+top:0;
+z-index:10;
+backdrop-filter:saturate(140%) blur(6px);
+background:rgba(10,14,20,.65);
+border-bottom:1px solid var(--line);
+}
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:14px 0;
+gap:12px;
+}
+.brand{
+display:flex;
+gap:10px;
+align-items:center;
+text-decoration:none;
+color:inherit;
+}
+.logo{
+height:42px;
+width:auto;
+border-radius:6px;
+}
+@media(max-width:600px){
+.logo{height:34px}
+}
+.title{
+font-weight:800;
+letter-spacing:.2px;
+}
+.badge{
+font-size:12px;
+color:var(--muted);
+}
+
+/* LANG TOGGLE */
+.lang-toggle{
+display:flex;
+gap:8px;
+margin-left:auto;
+}
+.lang-toggle button{
+border:1px solid #2a3b55;
+background:#0d1320;
+color:#cfe2ff;
+border-radius:20px;
+padding:6px 10px;
+cursor:pointer;
+font-size:12px;
+}
+.lang-toggle button.active{
+background:linear-gradient(90deg,var(--acc1),var(--acc2));
+color:var(--ctaTxt);
+border:none;
+font-weight:800;
+}
+[data-lang="en"] .lang-es{display:none}
+[data-lang="es"] .lang-en{display:none}
+
+main{padding:32px 0 40px}
+
+.hero-title{
+font-size:clamp(24px,4vw,32px);
+margin:0 0 6px 0;
+}
+.hero-text{
+margin:0 0 14px 0;
+color:var(--muted);
+font-size:15px;
+line-height:1.6;
+}
+
+.card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:14px;
+padding:18px 16px;
+margin-top:18px;
+box-shadow:0 10px 26px rgba(0,0,0,.28);
+}
+.pill{
+display:inline-block;
+padding:4px 10px;
+border-radius:999px;
+border:1px solid #2a3b55;
+background:#0b1320;
+font-size:11px;
+color:#b7c7e5;
+margin-bottom:10px;
+}
+.meta-line{
+font-size:13px;
+color:var(--muted);
+margin-bottom:6px;
+}
+
+/* Placeholder text for when no Cognito embed yet */
+.placeholder{
+font-size:13px;
+color:#c4d0e5;
+border:1px dashed #2a3b55;
+border-radius:10px;
+padding:12px;
+background:#0f1622;
+text-align:center;
+}
+
+/* FOOTER */
+footer{
+border-top:1px solid var(--line);
+color:var(--muted);
+font-size:13px;
+text-align:center;
+padding:20px;
+}
+footer a{color:#9fc1ff;text-decoration:underline}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<a href="/index.html" class="brand" aria-label="Go to homepage">
+<img src="/images/hooporia-logo.png" alt="Hooporia Institute Inc. Logo" class="logo" />
+<div>
+<div class="title">Cash Flow Hoops</div>
+<div class="badge">
+<span class="lang-en">by Hooporia Institute Inc.</span>
+<span class="lang-es">por Hooporia Institute Inc.</span>
+</div>
+</div>
+</a>
+
+<div class="lang-toggle" role="group" aria-label="Language">
+<button id="btn-en" class="active" aria-pressed="true">EN</button>
+<button id="btn-es" aria-pressed="false">ES-PR</button>
+</div>
+</div>
+</header>
+
+<main>
+<div class="wrap">
+<section>
+<h1 class="hero-title">
+<span class="lang-en">Request Access PIN</span>
+<span class="lang-es">Solicitar PIN de Acceso</span>
+</h1>
+<p class="hero-text">
+<span class="lang-en">
+Complete this short form so we can issue a secure program PIN for your team or league.
+Once approved, you’ll receive an email with your PIN and instructions to sign in to Cash Flow Hoops.
+</span>
+<span class="lang-es">
+Complete este formulario breve para que podamos emitir un PIN seguro de programa para su equipo o liga.
+Una vez aprobado, recibirá un correo electrónico con su PIN e instrucciones para entrar a Cash Flow Hoops.
+</span>
+</p>
+</section>
+
+<section class="card">
+<div class="pill">
+<span class="lang-en">For Coaches, Program Directors & League Admins</span>
+<span class="lang-es">Para Coaches, Directores de Programa y Administradores de Liga</span>
+</div>
+<p class="meta-line">
+<span class="lang-en">Fields typically include: Program Name, Location, Your Name, Email, Role, Number of Teams, and Notes.</span>
+<span class="lang-es">Los campos incluyen: Nombre del Programa, Localidad, Su Nombre, Correo Electrónico, Rol, Número de Equipos y Notas.</span>
+</p>
+
+<!-- 🔹 COGNITO EMBED GOES HERE -->
+<!-- Replace the placeholder <div> below with your Cognito embed code once it’s ready. -->
+<div id="cognito-form">
+<div class="placeholder">
+<span class="lang-en">
+Your Cognito “Request Access PIN” form will appear here once you paste the embed code.
+</span>
+<span class="lang-es">
+Aquí aparecerá su formulario de Cognito para “Solicitud de PIN de Acceso” cuando pegue el código de inserción.
+</span>
+</div>
+</div>
+</section>
+
+<section style="margin-top:20px;font-size:13px;color:var(--muted);">
+<p>
+<span class="lang-en">
+Need help or have questions about access? Email us at
+</span>
+<span class="lang-es">
+¿Necesita ayuda o tiene preguntas sobre el acceso? Escríbanos a
+</span>
+<a href="mailto:FiatPalante@gmail.com">FiatPalante@gmail.com</a>.
+</p>
+</section>
+</div>
+</main>
+
+<footer>
+© <script>document.write(new Date().getFullYear());</script> Hooporia Institute Inc. — All Rights Reserved.<br>
+EIN: 66-1104700 • UEI: T411JSGE5L65<br>
+Cash Flow Hoops is a project operated by Hooporia Institute Inc., a nonprofit organization dedicated to advancing youth basketball transparency and development.<br>
+<a href="/privacy.html">Privacy Policy</a> •
+<a href="/terms.html">Terms of Use</a> •
+<a href="mailto:FiatPalante@gmail.com">Contact Us</a>
+</footer>
+
+<script>
+(function(){
+const key='lang_request_pin';
+const root=document.documentElement;
+const btnEn=document.getElementById('btn-en');
+const btnEs=document.getElementById('btn-es');
+
+function setLang(lang){
+root.setAttribute('data-lang',lang);
+btnEn.classList.toggle('active', lang==='en');
+btnEs.classList.toggle('active', lang==='es');
+btnEn.setAttribute('aria-pressed', lang==='en');
+btnEs.setAttribute('aria-pressed', lang==='es');
+try{ localStorage.setItem(key,lang); }catch(_){}
+}
+
+const saved = (()=>{ try{return localStorage.getItem(key)}catch(_){return null} })();
+setLang(saved==='es' ? 'es' : 'en');
+
+btnEn.addEventListener('click',()=>setLang('en'));
+btnEs.addEventListener('click',()=>setLang('es'));
+})();
+</script>
+</body>
+</html>
