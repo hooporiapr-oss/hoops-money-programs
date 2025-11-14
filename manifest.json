@@ -1,21 +1,19 @@
 {
 "name": "Cash Flow Hoops",
-"short_name": "CFH",
-"description": "Youth basketball finance tracking made simple — powered by Hooporia Institute Inc.",
+"short_name": "Cash Flow Hoops",
 "start_url": "/",
 "scope": "/",
-"display": "fullscreen",
-"display_override": ["window-controls-overlay", "standalone", "fullscreen"],
-"theme_color": "#0e1116",
+"display": "standalone",
 "background_color": "#0e1116",
+"theme_color": "#0e1116",
 "icons": [
 {
-"src": "/images/hooporia-logo.png",
+"src": "/icons/icon-192.png",
 "sizes": "192x192",
 "type": "image/png"
 },
 {
-"src": "/images/hooporia-logo.png",
+"src": "/icons/icon-512.png",
 "sizes": "512x512",
 "type": "image/png"
 }
