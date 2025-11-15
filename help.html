@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Help • Need Support? — Cash Flow Hoops</title>
+<meta name="description" content="Help and guidance for using Cash Flow Hoops, a youth basketball cash flow tracker operated by Hooporia Institute Inc." />
+<meta name="theme-color" content="#0e1116" />
+
+<style>
+:root{
+--bg:#0e1116;--card:#161c26;--line:#232e3f;--text:#ecf1f8;--muted:#a7b1c2;
+--acc1:#2dd4bf;--acc2:#60a5fa;--ctaTxt:#06221f;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
+color:var(--text);
+background:linear-gradient(180deg,#0b0f14 0%,#0e1116 100%);
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+}
+a{color:#9fc1ff;text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* HEADER */
+header{
+position:sticky;top:0;z-index:10;
+backdrop-filter:saturate(140%) blur(6px);
+background:rgba(10,14,20,.55);
+border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px}
+.brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:inherit}
+.logo{height:42px;width:auto;border-radius:6px}
+@media(max-width:600px){.logo{height:34px}}
+.title{font-weight:800;letter-spacing:.2px}
+.badge{font-size:12px;color:var(--muted)}
+
+/* LANG TOGGLE */
+.lang-toggle{display:flex;gap:8px;margin-left:auto}
+.lang-toggle button{
+border:1px solid #2a3b55;
+background:#0d1320;
+color:#cfe2ff;
+border-radius:20px;
+padding:6px 10px;
+cursor:pointer;
+font-size:12px;
+}
+.lang-toggle button.active{
+background:linear-gradient(90deg,var(--acc1),var(--acc2));
+color:var(--ctaTxt);
+border:none;
+font-weight:800;
+}
+
+[data-lang="en"] .lang-es{display:none}
+[data-lang="es"] .lang-en{display:none}
+
+/* HERO */
+main{padding-bottom:40px}
+.hero{
+padding:40px 0 20px;
+}
+.hero h1{
+margin:0 0 10px 0;
+font-size:clamp(26px,4vw,32px);
+}
+.hero p{
+margin:0;
+color:var(--muted);
+max-width:760px;
+line-height:1.6;
+}
+
+/* HELP GRID */
+.help-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+margin-top:20px;
+}
+@media(max-width:900px){.help-grid{grid-template-columns:1fr}}
+.card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:14px;
+padding:16px;
+box-shadow:0 10px 26px rgba(0,0,0,.28);
+}
+.card h2{
+margin:0 0 8px 0;
+font-size:18px;
+}
+.card p, .card li{
+margin:0;
+color:var(--muted);
+font-size:14px;
+line-height:1.5;
+}
+.card ul{
+padding-left:18px;
+margin:6px 0 0 0;
+}
+.pill{
+display:inline-block;
+padding:3px 10px;
+border-radius:999px;
+border:1px solid #2a3b55;
+background:#0b1320;
+color:#cfe2ff;
+font-size:11px;
+margin-bottom:6px;
+}
+
+.help-section{
+margin-top:28px;
+}
+.help-section h2{
+margin:0 0 8px 0;
+font-size:18px;
+}
+.help-section p{
+margin:0 0 6px 0;
+color:var(--muted);
+line-height:1.6;
+font-size:14px;
+}
+
+/* BACK TO SIGN-IN BUTTON */
+.back-row{
+text-align:center;
+margin-top:30px;
+}
+.back-btn{
+display:inline-block;
+padding:14px 20px;
+border-radius:12px;
+background:linear-gradient(90deg,var(--acc1),var(--acc2));
+color:var(--ctaTxt);
+font-weight:900;
+text-decoration:none;
+font-size:16px;
+box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+
+/* FOOTER */
+footer{
+border-top:1px solid var(--line);
+color:var(--muted);
+font-size:13px;
+text-align:center;
+padding:20px;
+margin-top:10px;
+}
+footer a{color:#9fc1ff;text-decoration:underline}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<a href="/index.html" class="brand" aria-label="Back to Cash Flow Hoops home">
+<img src="/images/hooporia-logo.png" alt="Hooporia Institute Inc. Logo" class="logo" />
+<div>
+<div class="title">Cash Flow Hoops</div>
+<div class="badge">
+<span class="lang-en">by Hooporia Institute Inc.</span>
+<span class="lang-es">por Hooporia Institute Inc.</span>
+</div>
+</div>
+</a>
+<div class="lang-toggle" role="group" aria-label="Language">
+<button id="btn-en" class="active" aria-pressed="true">EN</button>
+<button id="btn-es" aria-pressed="false">ES-PR</button>
+</div>
+</div>
+</header>
+
+<main class="wrap">
+<!-- HERO INTRO -->
+<section class="hero">
+<h1>
+<span class="lang-en">Need Help with Cash Flow Hoops?</span>
+<span class="lang-es">¿Necesitas ayuda con Cash Flow Hoops?</span>
+</h1>
+<p>
+<span class="lang-en">
+This page is your support huddle. Here’s how to sign in, understand each section,
+and what to do if something doesn’t look right in your numbers.
+</span>
+<span class="lang-es">
+Esta página es tu “tiempo fuera” de apoyo. Aquí verás cómo entrar, entender cada sección
+y qué hacer si algo no se ve bien en tus números.
+</span>
+</p>
+</section>
+
+<!-- HELP GRID -->
+<section class="help-grid">
+<!-- Card 1: Getting Started -->
+<div class="card">
+<div class="pill">
+<span class="lang-en">Start Here</span>
+<span class="lang-es">Comienza aquí</span>
+</div>
+<h2>
+<span class="lang-en">1. Signing In with Your PIN</span>
+<span class="lang-es">1. Entrar con tu PIN</span>
+</h2>
+<p>
+<span class="lang-en">
+Use the PIN that was issued to your program. Each PIN is linked to a specific
+program or league, so only your staff sees your numbers.
+</span>
+<span class="lang-es">
+Usa el PIN asignado a tu programa. Cada PIN está vinculado a un programa o liga
+específica, así que solo tu personal ve sus propios números.
+</span>
+</p>
+<ul>
+<li>
+<span class="lang-en">Enter your PIN and tap <b>Sign In</b>.</span>
+<span class="lang-es">Escribe tu PIN y presiona <b>Sign In</b>.</span>
+</li>
+<li>
+<span class="lang-en">If the PIN doesn’t work, double-check digits and caps.</span>
+<span class="lang-es">Si el PIN no funciona, verifica bien los números.</span>
+</li>
+<li>
+<span class="lang-en">
+If you don’t have a PIN, use the
+<a href="/request-pin.html">Request Access PIN</a> page.
+</span>
+<span class="lang-es">
+Si no tienes PIN, usa la página
+<a href="/request-pin.html">Solicitar PIN de Acceso</a>.
+</span>
+</li>
+</ul>
+</div>
+
+<!-- Card 2: Adding Entries -->
+<div class="card">
+<div class="pill">
+<span class="lang-en">Daily Use</span>
+<span class="lang-es">Uso diario</span>
+</div>
+<h2>
+<span class="lang-en">2. Adding Income & Expenses</span>
+<span class="lang-es">2. Añadir ingresos y gastos</span>
+</h2>
+<p>
+<span class="lang-en">
+Use the Add Entry section to record every dollar that comes in or goes out:
+registrations, dues, uniforms, tournaments, travel, and more.
+</span>
+<span class="lang-es">
+Usa la sección de Add Entry para registrar cada dólar que entra o sale:
+inscripciones, mensualidades, uniformes, torneos, viajes y más.
+</span>
+</p>
+<ul>
+<li>
+<span class="lang-en"><b>Type:</b> Choose Income or Expense.</span>
+<span class="lang-es"><b>Type:</b> Escoge Income o Expense.</span>
+</li>
+<li>
+<span class="lang-en"><b>Category:</b> Pick the best match (Registration, Uniforms, Travel, etc.).</span>
+<span class="lang-es"><b>Category:</b> Escoge la categoría correcta (Registration, Uniforms, Travel, etc.).</span>
+</li>
+<li>
+<span class="lang-en"><b>Team / League:</b> Optional, but very helpful for reports.</span>
+<span class="lang-es"><b>Team / League:</b> Opcional, pero muy útil para reportes.</span>
+</li>
+<li>
+<span class="lang-en"><b>Note:</b> Add a short description like “3 jerseys @ $20”.</span>
+<span class="lang-es"><b>Note:</b> Añade una nota breve como “3 jerseys @ $20”.</span>
+</li>
+</ul>
+</div>
+
+<!-- Card 3: Reading the Dashboard -->
+<div class="card">
+<div class="pill">
+<span class="lang-en">Big Picture</span>
+<span class="lang-es">Panorama</span>
+</div>
+<h2>
+<span class="lang-en">3. Dashboard, Summary & CSV</span>
+<span class="lang-es">3. Dashboard, Summary y CSV</span>
+</h2>
+<p>
+<span class="lang-en">
+The Dashboard and Summary show total income, expenses, and net for a date range.
+You can also download a CSV for deeper analysis.
+</span>
+<span class="lang-es">
+El Dashboard y el Summary muestran ingresos, gastos y neto por rango de fecha.
+También puedes bajar un CSV para análisis más profundo.
+</span>
+</p>
+<ul>
+<li>
+<span class="lang-en">Adjust the number of days and tap <b>Refresh</b>.</span>
+<span class="lang-es">Ajusta la cantidad de días y presiona <b>Refresh</b>.</span>
+</li>
+<li>
+<span class="lang-en">Use CSV for accountants, boards, or sponsor reports.</span>
+<span class="lang-es">Usa el CSV para contadores, juntas o reportes a auspiciadores.</span>
+</li>
+<li>
+<span class="lang-en">Your program sees only its own data.</span>
+<span class="lang-es">Tu programa solo ve sus propios datos.</span>
+</li>
+</ul>
+</div>
+</section>
+
+<!-- EXTRA SUPPORT SECTION -->
+<section class="help-section">
+<h2>
+<span class="lang-en">If Something Looks Wrong</span>
+<span class="lang-es">Si algo se ve raro</span>
+</h2>
+<p>
+<span class="lang-en">
+First, check your date range and filters. Many “missing” entries are simply outside
+the date filter or saved under a different team or program name.
+</span>
+<span class="lang-es">
+Primero, revisa el rango de fecha y los filtros. Muchas entradas “perdidas”
+están fuera del rango seleccionado o se guardaron bajo otro equipo o programa.
+</span>
+</p>
+<p>
+<span class="lang-en">
+If you still can’t find what you’re looking for, you can export a CSV and review
+line by line, or reach out to us for help.
+</span>
+<span class="lang-es">
+Si todavía no encuentras lo que buscas, puedes bajar el CSV y revisar línea por línea
+o escribirnos para apoyo directo.
+</span>
+</p>
+</section>
+
+<section class="help-section">
+<h2>
+<span class="lang-en">Need Direct Support?</span>
+<span class="lang-es">¿Necesitas apoyo directo?</span>
+</h2>
+<p>
+<span class="lang-en">
+For anything urgent — access issues, program questions, or suggestions to improve Cash Flow Hoops —
+send us a message and we’ll respond as soon as we can.
+</span>
+<span class="lang-es">
+Para asuntos urgentes — problemas de acceso, preguntas de programa o sugerencias para mejorar
+Cash Flow Hoops — escríbenos y te contestamos lo antes posible.
+</span>
+</p>
+<p>
+📧 <a href="mailto:FiatPalante@gmail.com">FiatPalante@gmail.com</a>
+</p>
+</section>
+
+<!-- BACK TO SIGN-IN -->
+<div class="back-row">
+<a href="https://cashflowhoops.app" class="back-btn">
+<span class="lang-en">Back to Sign-In</span>
+<span class="lang-es">Regresar al Inicio de Sesión</span>
+</a>
+</div>
+</main>
+
+<footer class="footer">
+© <script>document.write(new Date().getFullYear());</script> Hooporia Institute Inc. — All Rights Reserved.<br>
+EIN: 66-1104700 • UEI: T411JSGE5L65<br>
+Cash Flow Hoops is a project operated by Hooporia Institute Inc., a nonprofit organization dedicated to advancing youth basketball transparency and development.<br>
+<a href="/privacy.html">Privacy Policy</a> •
+<a href="/terms.html">Terms of Use</a> •
+<a href="/request-pin.html">Request Access PIN</a> •
+<a href="mailto:FiatPalante@gmail.com">Contact Us</a>
+</footer>
+
+<script>
+(function(){
+const key='lang_help';
+const root=document.documentElement;
+const btnEn=document.getElementById('btn-en');
+const btnEs=document.getElementById('btn-es');
+
+function setLang(lang){
+root.setAttribute('data-lang',lang);
+btnEn.classList.toggle('active', lang==='en');
+btnEs.classList.toggle('active', lang==='es');
+btnEn.setAttribute('aria-pressed', lang==='en');
+btnEs.setAttribute('aria-pressed', lang==='es');
+try{ localStorage.setItem(key,lang); }catch(_){}
+}
+
+const saved = (()=>{ try{return localStorage.getItem(key)}catch(_){return null} })();
+setLang(saved === 'es' ? 'es' : 'en');
+
+btnEn.addEventListener('click', ()=>setLang('en'));
+btnEs.addEventListener('click', ()=>setLang('es'));
+})();
+</script>
+</body>
+</html>
