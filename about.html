@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>About — Cash Flow Hoops</title>
-<meta name="description" content="Learn about Cash Flow Hoops, a youth basketball cash flow system created by Hooporia Institute Inc.">
+<title>Cash Flow Hoops Manifesto</title>
+<meta name="description" content="The Cash Flow Hoops Manifesto — how we see youth basketball, transparency, and community-powered finance." />
 <meta name="theme-color" content="#0e1116" />
+
 <style>
 :root{
 --bg:#0e1116; --card:#151a22; --line:#1f2733; --text:#e8edf4; --muted:#a7b1c2;
---accent:#2dd4bf; --accent2:#60a5fa;
+--accent:#2dd4bf; --accent2:#60a5fa; --ctaTxt:#06221f;
 }
 *{box-sizing:border-box}
-html,body{height:100%}
 body{
 margin:0;
 font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
@@ -22,225 +22,337 @@ background:linear-gradient(180deg,#0b0f14,#0e1116);
 -moz-osx-font-smoothing:grayscale;
 }
 a{color:#9fc1ff;text-decoration:underline}
+
 .wrap{
 max-width:1100px;
 margin:0 auto;
-padding:20px;
+padding:0 20px 40px;
 }
+
+/* HEADER */
 header{
-padding:16px 0 8px 0;
+position:sticky;
+top:0;
+z-index:10;
+backdrop-filter:saturate(140%) blur(6px);
+background:rgba(10,14,20,.55);
 border-bottom:1px solid var(--line);
-display:flex;
-justify-content:space-between;
-align-items:flex-start;
-gap:12px;
-flex-wrap:wrap;
 }
-.logo-row{
+.nav{
 display:flex;
 align-items:center;
-gap:10px;
+justify-content:space-between;
+padding:14px 0;
+gap:12px;
 }
-.logo-row img{
-height:40px;
+.brand{
+display:flex;
+gap:10px;
+align-items:center;
+text-decoration:none;
+color:inherit;
+}
+.logo{
+height:42px;
 width:auto;
 border-radius:6px;
 }
-.logo-text{
+@media(max-width:600px){
+.logo{height:34px}
+}
+.title{
 font-weight:800;
 letter-spacing:.2px;
 }
-.logo-sub{
+.badge{
 font-size:12px;
 color:var(--muted);
 }
 
-/* Language toggle */
+/* LANGUAGE TOGGLE */
 .lang-toggle{
-display:inline-flex;
-border-radius:999px;
-border:1px solid var(--line);
-overflow:hidden;
-margin-top:4px;
+display:flex;
+gap:8px;
+margin-left:auto;
 }
 .lang-toggle button{
-background:transparent;
-border:none;
-padding:6px 12px;
-font-size:12px;
-color:var(--muted);
+border:1px solid #2a3b55;
+background:#0d1320;
+color:#cfe2ff;
+border-radius:20px;
+padding:6px 10px;
 cursor:pointer;
+font-size:12px;
 }
 .lang-toggle button.active{
 background:linear-gradient(90deg,var(--accent),var(--accent2));
-color:#041214;
-font-weight:700;
+color:var(--ctaTxt);
+border:none;
+font-weight:800;
 }
 
-h1{
-margin:18px 0 10px 0;
+[data-lang="en"] .lang-es{display:none}
+[data-lang="es"] .lang-en{display:none}
+
+main{
+padding-top:28px;
+}
+
+/* MANIFESTO SECTION */
+.manifesto-section{
+padding:30px 0;
+}
+.manifesto-card{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:14px;
+padding:20px;
+box-shadow:0 10px 26px rgba(0,0,0,.28);
+}
+.manifesto-card h1{
+margin:0 0 10px 0;
 font-size:26px;
 }
-h2{
-margin:20px 0 8px 0;
+.manifesto-card h2{
+margin:18px 0 8px 0;
 font-size:18px;
 }
-p{
+.manifesto-card h3{
+margin:18px 0 6px 0;
+font-size:16px;
+}
+.manifesto-card p{
 margin:0 0 10px 0;
 color:var(--muted);
 line-height:1.6;
 }
-ul{
-margin:0 0 12px 18px;
+.manifesto-card ul{
+margin:0 0 10px 20px;
 padding:0;
 color:var(--muted);
 }
-li{margin:4px 0}
-.card{
-background:var(--card);
-border:1px solid var(--line);
-border-radius:12px;
-padding:18px 18px 12px 18px;
-margin-top:18px;
+.manifesto-tagline{
+margin-top:14px;
+font-weight:700;
 }
 
-.footer{
-border-top:1px solid #243047;
-color:#a7b1c2;
+/* CTA BELOW MANIFESTO */
+.center-cta{
+text-align:center;
+margin-top:26px;
+}
+.cta{
+display:inline-block;
+padding:14px 18px;
+border-radius:12px;
+font-weight:900;
+background:linear-gradient(90deg,var(--accent),var(--accent2));
+color:var(--ctaTxt);
+border:none;
+box-shadow:0 8px 18px rgba(0,0,0,.25);
+text-decoration:none;
+}
+.cta:hover{
+filter:brightness(1.05);
+}
+.cta-sub{
+margin-top:10px;
+font-size:13px;
+color:var(--muted);
+}
+
+/* FOOTER */
+footer{
+border-top:1px solid var(--line);
+color:var(--muted);
 font-size:13px;
 text-align:center;
 padding:20px;
-margin-top:40px;
+margin-top:10px;
 }
-.footer a{
+footer a{
 color:#9fc1ff;
 text-decoration:underline;
 }
-
-/* Language visibility */
-[data-page-lang="en"] .es-block{display:none}
-[data-page-lang="es"] .en-block{display:none}
 </style>
 </head>
-<body data-page-lang="en">
-<main class="wrap">
+<body>
 <header>
-<div class="logo-row">
-<a href="/index.html" style="display:flex; gap:10px; align-items:center; text-decoration:none; color:inherit;">
+<div class="wrap nav">
+<a href="/index.html" class="brand" aria-label="Back to Cash Flow Hoops home">
 <img src="/hooporia-logo.png" alt="Hooporia Institute Inc. Logo" class="logo" />
 <div>
-<div class="logo-text">Cash Flow Hoops</div>
-<div class="logo-sub">Operated by Hooporia Institute Inc.</div>
+<div class="title">Cash Flow Hoops</div>
+<div class="badge">
+<span class="lang-en">by Hooporia Institute Inc.</span>
+<span class="lang-es">por Hooporia Institute Inc.</span>
+</div>
 </div>
 </a>
-</div>
 
-<div class="lang-toggle" aria-label="Language toggle">
-<button type="button" id="btn-en" class="active">EN</button>
-<button type="button" id="btn-es">ES (PR)</button>
+<div class="lang-toggle" role="group" aria-label="Language">
+<button id="btn-en" class="active" aria-pressed="true">EN</button>
+<button id="btn-es" aria-pressed="false">ES-PR</button>
+</div>
 </div>
 </header>
 
-<!-- ENGLISH ABOUT -->
-<section id="about-en" class="card en-block">
-<h1>About Cash Flow Hoops</h1>
+<main>
+<div class="wrap">
+<section class="manifesto-section">
+<div class="manifesto-card">
+<h1>
+<span class="lang-en">Cash Flow Hoops Manifesto</span>
+<span class="lang-es">Manifiesto de Cash Flow Hoops</span>
+</h1>
 
-<h2>What is Cash Flow Hoops?</h2>
 <p>
-Cash Flow Hoops is a simple, bilingual cash flow system built for youth basketball programs, leagues, and teams.
-It gives organizers a clear, private way to track how money enters and leaves the program — without getting
-lost in spreadsheets or notebooks.
+<span class="lang-en">
+Youth basketball deserves more than chaos and guesswork. It deserves clarity, transparency, and respect.
+Behind every program is a coach doing the impossible, parents making sacrifices, and a community holding it together.
+Cash Flow Hoops exists for them.
+</span>
+<span class="lang-es">
+El baloncesto juvenil merece más que caos y adivinanzas. Merece claridad, transparencia y respeto.
+Detrás de cada programa hay un coach haciendo lo imposible, padres haciendo sacrificios y una comunidad sosteniéndolo todo.
+Cash Flow Hoops existe para ellos.
+</span>
 </p>
 
-<h2>Why we created it</h2>
+<h2>
+<span class="lang-en">1. We stand for transparency</span>
+<span class="lang-es">1. Defendemos la transparencia</span>
+</h2>
 <p>
-Many programs run on passion, volunteers, and trust — but little financial clarity.
-Cash Flow Hoops was created so directors, coaches, and coordinators can quickly see
-registrations, dues, sponsorships, tournaments, travel, and expenses in one secure place.
+<span class="lang-en">
+No more mystery money. Every income, every expense, every program—clear and accountable.
+Trust is the true currency of youth sports.
+</span>
+<span class="lang-es">
+No más dinero misterioso. Cada ingreso, cada gasto, cada programa—claro y responsable.
+La confianza es la verdadera moneda del deporte juvenil.
+</span>
 </p>
 
-<h2>How programs use Cash Flow Hoops</h2>
-<ul>
-<li>Track income and expenses per team, league, division, or program.</li>
-<li>Run quick summaries to share with parents, boards, and community partners.</li>
-<li>Export CSV files when you need more detailed accounting or reporting.</li>
-<li>Keep information private and scoped to each program via secure PIN access.</li>
-</ul>
-
-<h2>Who we serve</h2>
-<p>Cash Flow Hoops is designed for:</p>
-<ul>
-<li>Youth leagues and tournaments.</li>
-<li>Independent travel and club teams.</li>
-<li>Nonprofits, clubs, and community programs.</li>
-<li>Administrators managing multiple divisions or age groups.</li>
-</ul>
-
-<h2>Hooporia Institute Inc.</h2>
+<h2>
+<span class="lang-en">2. Coaches deserve tools, not headaches</span>
+<span class="lang-es">2. Los coaches merecen herramientas, no dolores de cabeza</span>
+</h2>
 <p>
-Cash Flow Hoops is a project of <b>Hooporia Institute Inc.</b>, a nonprofit organization focused on the
-development of youth basketball, community impact, and program transparency across Puerto Rico and beyond.
-Our guiding phrase is <i>Fiat Pa’lante</i> — “Let there be progress.”
+<span class="lang-en">
+Coaches should coach—not chase receipts or spreadsheets at midnight.
+Cash Flow Hoops keeps entries fast, mobile-first, and private by design,
+so the work on the court stays front and center.
+</span>
+<span class="lang-es">
+Los coaches deben poder enfocarse en dirigir, no en perseguir recibos ni hojas de cálculo a medianoche.
+Cash Flow Hoops hace las entradas rápidas, móvil primero y privadas por diseño,
+para que el trabajo en la cancha siga siendo lo principal.
+</span>
 </p>
 
-<h2>Contact</h2>
+<h2>
+<span class="lang-en">3. Every program’s dignity matters</span>
+<span class="lang-es">3. La dignidad de cada programa importa</span>
+</h2>
 <p>
-Have questions about bringing Cash Flow Hoops to your program?
-You can reach us at <a href="mailto:FiatPalante@gmail.com">FiatPalante@gmail.com</a>.
+<span class="lang-en">
+Small and grassroots programs deserve elite tools too. No one should feel “less than”
+because they don't have a big budget. Our commitment: powerful tools, accessible and free.
+</span>
+<span class="lang-es">
+Los programas pequeños y de base también merecen herramientas de nivel élite.
+Nadie debe sentirse “menos” por no tener un gran presupuesto.
+Nuestro compromiso: herramientas poderosas, accesibles y gratuitas.
+</span>
 </p>
+
+<h2>
+<span class="lang-en">4. We connect hoops and financial literacy</span>
+<span class="lang-es">4. Conectamos el baloncesto con la educación financiera</span>
+</h2>
+<p>
+<span class="lang-en">
+Basketball teaches discipline and teamwork. We add financial clarity and accountability.
+Kids who grow up in transparent programs learn to respect money, planning, and responsibility.
+</span>
+<span class="lang-es">
+El baloncesto enseña disciplina y trabajo en equipo. Nosotros añadimos claridad y responsabilidad financiera.
+Los jóvenes que crecen en programas transparentes aprenden a respetar el dinero, la planificación y la responsabilidad.
+</span>
+</p>
+
+<h2>
+<span class="lang-en">5. We honor parents and communities</span>
+<span class="lang-es">5. Honramos a los padres y las comunidades</span>
+</h2>
+<p>
+<span class="lang-en">
+We recognize the parents, caregivers, and community members who fund uniforms, travel, food, and gym time.
+Clear reporting is a form of respect for every sacrifice they make.
+</span>
+<span class="lang-es">
+Reconocemos a los padres, encargados y miembros de comunidad que cubren uniformes, viajes, comida y tiempo de cancha.
+Informes claros son una forma de respeto por cada sacrificio que hacen.
+</span>
+</p>
+
+<h2>
+<span class="lang-en">6. Sponsors are partners in impact</span>
+<span class="lang-es">6. Los auspiciadores son socios en el impacto</span>
+</h2>
+<p>
+<span class="lang-en">
+We welcome sponsors who believe in community, not just logo placement.
+Cash Flow Hoops aligns brands with real impact in youth sports, not empty impressions.
+</span>
+<span class="lang-es">
+Damos la bienvenida a auspiciadores que creen en la comunidad, no solo en colocar un logo.
+Cash Flow Hoops alinea marcas con impacto real en el deporte juvenil, no con impresiones vacías.
+</span>
+</p>
+
+<h2>
+<span class="lang-en">7. We are building a new standard</span>
+<span class="lang-es">7. Estamos construyendo un nuevo estándar</span>
+</h2>
+<p>
+<span class="lang-en">
+This is more than an app. It’s a new expectation for how youth basketball programs manage and explain money.
+Clear, respectful, accountable—that’s the standard we’re setting.
+</span>
+<span class="lang-es">
+Esto es más que una aplicación. Es una nueva expectativa de cómo los programas de baloncesto juvenil
+manejan y explican el dinero. Claro, respetuoso y responsable—
+ese es el estándar que estamos estableciendo.
+</span>
+</p>
+
+<p class="manifesto-tagline">
+<span class="lang-en">
+We are Cash Flow Hoops. We are the bridge between the court and the community. Pa’lante, always.
+</span>
+<span class="lang-es">
+Somos Cash Flow Hoops. Somos el puente entre la cancha y la comunidad. Pa’lante, siempre.
+</span>
+</p>
+</div>
 </section>
 
-<!-- SPANISH ABOUT -->
-<section id="about-es" class="card es-block" style="display:none">
-<h1>Sobre Cash Flow Hoops</h1>
-
-<h2>¿Qué es Cash Flow Hoops?</h2>
-<p>
-Cash Flow Hoops es un sistema simple y bilingüe de flujo de efectivo para programas, ligas y equipos
-de baloncesto juvenil. Ofrece una forma clara y privada de ver cómo entra y sale el dinero del
-programa, sin perderse en libretas ni hojas de cálculo.
-</p>
-
-<h2>Por qué lo creamos</h2>
-<p>
-Muchos programas funcionan con pasión, voluntarios y confianza, pero con poca claridad financiera.
-Cash Flow Hoops se creó para que directores, coaches y coordinadores puedan ver rápidamente
-matrículas, cuotas, auspicios, torneos, viajes y gastos en un solo lugar seguro.
-</p>
-
-<h2>Cómo usan Cash Flow Hoops los programas</h2>
-<ul>
-<li>Registrar ingresos y gastos por equipo, liga, división o programa.</li>
-<li>Generar resúmenes rápidos para compartir con padres, juntas y aliados comunitarios.</li>
-<li>Exportar archivos CSV cuando se necesitan informes o contabilidad más detallada.</li>
-<li>Mantener la información privada y limitada a cada programa mediante acceso con PIN seguro.</li>
-</ul>
-
-<h2>A quién servimos</h2>
-<p>Cash Flow Hoops está diseñado para:</p>
-<ul>
-<li>Ligas y torneos juveniles.</li>
-<li>Equipos de club y viajes.</li>
-<li>Organizaciones sin fines de lucro, clubes y programas comunitarios.</li>
-<li>Administradores que manejan múltiples divisiones o categorías.</li>
-</ul>
-
-<h2>Hooporia Institute Inc.</h2>
-<p>
-Cash Flow Hoops es un proyecto de <b>Hooporia Institute Inc.</b>, una organización sin fines de lucro
-enfocada en el desarrollo del baloncesto juvenil, el impacto comunitario y la transparencia
-de los programas en Puerto Rico y más allá. Nuestro lema es <i>Fiat Pa’lante</i> — “Que haya progreso”.
-</p>
-
-<h2>Contacto</h2>
-<p>
-¿Desea llevar Cash Flow Hoops a su programa?
-Puede escribirnos a <a href="mailto:FiatPalante@gmail.com">FiatPalante@gmail.com</a>.
-</p>
+<section class="center-cta">
+<a class="cta" href="https://cashflowhoops.app" aria-label="Open Cash Flow Hoops app">
+<span class="lang-en">Launch Cash Flow Hoops</span>
+<span class="lang-es">Abrir Cash Flow Hoops</span>
+</a>
+<div class="cta-sub">
+<span class="lang-en">Already have a PIN? Use it to sign in to your program.</span>
+<span class="lang-es">¿Ya tienes un PIN? Úsalo para entrar a tu programa.</span>
+</div>
 </section>
+</div>
 </main>
 
-<footer class="footer">
+<footer>
 © <script>document.write(new Date().getFullYear());</script> Hooporia Institute Inc. — All Rights Reserved.<br>
 EIN: 66-1104700 • UEI: T411JSGE5L65<br>
 Cash Flow Hoops is a project operated by Hooporia Institute Inc., a nonprofit organization dedicated to advancing youth basketball transparency and development.<br>
@@ -251,28 +363,25 @@ Cash Flow Hoops is a project operated by Hooporia Institute Inc., a nonprofit or
 
 <script>
 (function(){
+const root = document.documentElement;
 const btnEn = document.getElementById('btn-en');
 const btnEs = document.getElementById('btn-es');
-const root = document.body;
+const KEY = 'lang_manifesto';
 
-function showEn(){
-root.setAttribute('data-page-lang','en');
-document.getElementById('about-en').style.display = 'block';
-document.getElementById('about-es').style.display = 'none';
-btnEn.classList.add('active');
-btnEs.classList.remove('active');
-}
-function showEs(){
-root.setAttribute('data-page-lang','es');
-document.getElementById('about-en').style.display = 'none';
-document.getElementById('about-es').style.display = 'block';
-btnEn.classList.remove('active');
-btnEs.classList.add('active');
+function setLang(lang){
+root.setAttribute('data-lang', lang);
+btnEn.classList.toggle('active', lang === 'en');
+btnEs.classList.toggle('active', lang === 'es');
+btnEn.setAttribute('aria-pressed', lang === 'en');
+btnEs.setAttribute('aria-pressed', lang === 'es');
+try{ localStorage.setItem(KEY, lang); }catch(_){}
 }
 
-btnEn.addEventListener('click', showEn);
-btnEs.addEventListener('click', showEs);
-showEn();
+const saved = (()=>{ try{return localStorage.getItem(KEY)}catch(_){return null} })();
+setLang(saved === 'es' ? 'es' : 'en');
+
+btnEn.addEventListener('click', ()=>setLang('en'));
+btnEs.addEventListener('click', ()=>setLang('es'));
 })();
 </script>
 </body>
